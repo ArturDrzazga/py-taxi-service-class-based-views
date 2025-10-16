@@ -5,9 +5,11 @@
       <tr>
         <td>{{ car.manufacturer.name }}</td>
         <td>{{ car.manufacturer.country }}</td>
-        {% for driver in car.drivers.all %}
-          <td>{{ driver.username }}</td>
-        {% endfor %}
+        <td>
+          {% for driver in car.drivers.all %}
+            {{ driver.username }}
+          {% endfor %}
+        </td>
       </tr>
   </table>
 {% endblock %}
